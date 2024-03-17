@@ -128,7 +128,7 @@ void _square(int* n) {
 ![image](https://github.com/parthmern/C-Language/assets/125397720/882ca709-fd6d-4f6c-be84-a409373c7370)
 
 ```
-// Array is a Pointer
+// Array is a Pointer -- IMP
 
 int *ptr = &arr[0];  // OR
 int *ptr = arr;
@@ -242,3 +242,42 @@ int main() {
 
 ```
 - [imp vid](https://youtu.be/iaWMpHLQmDU?si=6mASSNCZ6DznzbbI)
+
+## 💛 String
+```
+    char name[ ] = {'S', 'H', 'R', 'A', 'D', 'H', 'A','\0'}; // like array with null char in last, size = 8
+    char name[] = "SHRADHA"; // there is also null char in last but which is automaticlly added , size = 8
+    
+    // Printing using formatspecifier
+    printf("Printing using printf: %s\n", name);
+    
+    // Printing using a for loop
+    printf("Printing using for loop: ");
+    for (int i = 0; name[i] != '\0'; ++i) {
+        printf("%c", name[i]);
+    }
+
+    // how to take input string
+    char input[50];
+    scanf("%s", input);   // cannot use multiple word
+    gets(input);          // can take multiword input , unsafe
+    fgets(input, 50, stdin);     // stops when n-1 chars input or new line is entered , safe
+    puts(input);          // same as printf string
+
+```
+-------------------------------------
+```
+// like array STRING is pointer
+
+    char *canChange = "Hello World"; // Declares a pointer to a constant string "Hello World"
+    puts(canChange); // Prints the string "Hello World"
+    
+    canChange = "Hello"; // Changes the pointer to point to the string "Hello"
+    puts(canChange); // Prints the string "Hello"
+    
+    char cannotChange[] = "Hello World"; // Declares a character array with the content "Hello World"
+    puts(cannotChange); // Prints the string "Hello World"
+
+    // The following line would cause a compilation error
+    // cannotChange = "Hello"; // Trying to assign a new string to the array, which is not allowed
+```
