@@ -115,3 +115,38 @@ void _square(int* n) {
 
 //when we need multiple values to return then that time use pointer by referance
 ```
+
+## 💚 Arrays
+- Collection of similar data types stored at contiguous memory locations
+- ```
+    int marks[3];
+    int marks[ ] = {97, 98, 89};
+    int marks[ 3 ] = {97, 98, 89};
+  ```
+
+### 💙 Pointers Arithmetic
+![image](https://github.com/parthmern/C-Language/assets/125397720/882ca709-fd6d-4f6c-be84-a409373c7370)
+
+```
+// triversing on array
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {1, 2, 3, 4, 5};
+    int *ptr = numbers; // Pointer to the first element of the array
+                        // here & use nhi karna for array to give value to pointer
+
+    // Incrementing the pointer moves it to the next element
+    printf("After incrementing, *ptr is: %d\n", *ptr); // Prints 1 (first element)
+    ptr++; // Incrementing the pointer - here in pointer value increased by the dataType here dT is 4byte so pointer is increased by 4 byte
+    printf("After incrementing, *ptr is: %d\n", *ptr); // Prints 2 (second element)
+
+    // Decrementing the pointer moves it to the previous element
+    ptr--; // Decrementing the pointer
+    printf("After decrementing, *ptr is: %d\n", *ptr); // Prints 1 (first element)
+
+    return 0;
+}
+
+```
+
