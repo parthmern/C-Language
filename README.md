@@ -79,3 +79,39 @@ printf("%d\n", *ptr);   // 22 Output: Value pointed to by 'ptr', which is the va
 printf("%d\n", *(&age));  // 22 Output: Value of 'age' obtained by dereferencing its address
 
 ```
+### 💛 call by value and call by referance
+
+```
+#include <stdio.h>
+
+void square(int n);         // Function prototype for call by value
+void _square(int* n);       // Function prototype for call by reference
+
+int main() {
+    int number = 4;
+
+    // Call by value
+    square(number);
+    printf("n is : %d\n", number);
+
+    // Call by reference
+    _square(&number);
+    printf("n is : %d\n", number);
+
+    return 0;
+}
+
+// Function definition for call by value
+void square(int n) {               // here all arguments create a copy for square Func
+    n = n * n;                     // changing value but it does not affect the original value in MAIN func
+    printf("square is : %d\n", n); // if we need to update value then we can return it and store it while calling func
+}
+
+// Function definition for call by reference
+void _square(int* n) {
+    *n = (*n) * (*n);              // imp: variable = values
+    printf("square is : %d\n", *n);
+}
+
+//when we need multiple values to return then that time use pointer by referance
+```
