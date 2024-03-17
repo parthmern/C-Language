@@ -128,6 +128,14 @@ void _square(int* n) {
 ![image](https://github.com/parthmern/C-Language/assets/125397720/882ca709-fd6d-4f6c-be84-a409373c7370)
 
 ```
+// Array is a Pointer
+
+int *ptr = &arr[0];  // OR
+int *ptr = arr;
+```
+----------------------
+
+```
 // triversing on array
 #include <stdio.h>
 
@@ -150,3 +158,87 @@ int main() {
 
 ```
 
+### 🧡 Array as Function Argument
+
+```
+#include <stdio.h>
+
+// Way of receving
+
+int sum(int arr[]) {
+    int sum_of_array = 0;
+    for (int i = 0; i < 4; ++i) {
+        sum_of_array += arr[i]; 
+    }
+
+    return sum_of_array;
+}
+
+int main() {
+    int result;
+    int array[] = {23, 33, 44, 55};
+
+    result = sum(array); // Sending array as param
+
+    printf("Result = %d", result); 
+
+    return 0; 
+}
+
+```
+-------------------------------------------
+```
+void display(int *ptr) {
+    printf("%d", *ptr);
+}
+
+int main() {
+  int arr[] = {1, 2, 3, 4};
+  for (int i=0; i<4; i++) {
+      display(&arr[i]);
+ }
+return 0;
+```
+------------------------------------------
+```
+#include <stdio.h>
+
+int sum(int *arr, int size) {
+    int sum_of_array = 0;
+    for (int i = 0; i < size; ++i) {
+        sum_of_array += arr[i];
+    }
+    return sum_of_array;
+}
+
+int main() {
+    int result;
+    int array[] = {23, 33, 44, 55};
+    int size = sizeof(array) / sizeof(array[0]);
+    result = sum(array, size);
+    printf("Result = %d", result);
+    return 0;
+}
+
+```
+--------------------------------------------
+```
+#include <stdio.h>
+
+void display(int *ptr, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", *(ptr + i));       // by increasing ptr we can travel on index
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    display(arr, size);
+
+    return 0;
+}
+
+```
+- [imp vid](https://youtu.be/iaWMpHLQmDU?si=6mASSNCZ6DznzbbI)
