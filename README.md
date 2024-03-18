@@ -320,3 +320,23 @@ ptr = &s1;   // Assign the address of the struct student variable to the pointer
 printf("Name: %s\n", (*ptr).name);
 printf("Name: %s\n", ptr->name);   // ARROW operator : (*ptr).code === ptr->code
 ```
+
+### Passing structure to function
+```
+struct student stud1; 
+printInfo(stud1);
+-----------------------------
+void printInfo(struct student s1){
+    printf("%s \n", s1.name);
+}
+```
+----------------------------
+```
+struct student stud1; 
+printInfo(&stud1);
+-----------------------------
+void printInfo(struct student *s) {
+    printf("Name: %s\n", s->name);
+    printf("Name: %s\n", (*s).name);
+}
+```
