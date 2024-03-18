@@ -281,3 +281,42 @@ int main() {
     // The following line would cause a compilation error
     // cannotChange = "Hello"; // Trying to assign a new string to the array, which is not allowed
 ```
+
+## 💙 Structure
+- a collection of values of different data types
+- ```
+  For a student store the following :
+  name (String)
+  roll no (Integer)
+  cgpa (Float)
+
+  -------------------------------------------------
+  struct student {            // declaring struct
+    char name[100];
+    int roll;
+    float cgpa;
+  };
+
+  struct student s1;          // initializing struct
+  s1.cgpa = 7.5;              // accessing member
+
+  struct student s2 = { "rajat", 1552, 8.3};  // declaring and initializing 
+  
+  ```
+
+### Array of structure
+```
+struct student s[10] ; // struct student is-> dataType
+```
+![image](https://github.com/parthmern/C-Language/assets/125397720/0ba2407a-1803-4190-b5c0-fbd612acd58d)
+
+### Pointers to Structures
+```
+struct student s1; // Declare a variable of type struct student
+struct student *ptr; // Declare a pointer to a struct student
+
+ptr = &s1;   // Assign the address of the struct student variable to the pointer
+
+printf("Name: %s\n", (*ptr).name);
+printf("Name: %s\n", ptr->name);   // ARROW operator : (*ptr).code === ptr->code
+```
