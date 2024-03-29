@@ -160,6 +160,8 @@ int main() {
 
 ### 🧡 Array as Function Argument
 
+- [jenny's lecture imp](https://youtu.be/2aScqfAI3oc?si=7hBj5gHaH14dopBg)
+
 ```
 #include <stdio.h>
 
@@ -269,7 +271,7 @@ int main() {
 ```
 // like array STRING is pointer
 
-    char *canChange = "Hello World"; // Declares a pointer to a constant string "Hello World"
+    char *canChange = "Hello World"; // Declares a pointer to a constant string "Hello World" 
     puts(canChange); // Prints the string "Hello World"
     
     canChange = "Hello"; // Changes the pointer to point to the string "Hello"
@@ -279,8 +281,11 @@ int main() {
     puts(cannotChange); // Prints the string "Hello World"
 
     // The following line would cause a compilation error
-    // cannotChange = "Hello"; // Trying to assign a new string to the array, which is not allowed
+    // cannotChange = "Hello"; // Trying to assign a new string to the array, which is not allowed 
 ```
+
+- [jenny's lec](https://youtu.be/gW2xHKk1cBA?si=Mr1kEEzyArrzAuKM)
+- [how to return string](https://youtu.be/JNdbsF-78uk?si=s0g5jAqTDINCAXiu)
 
 ## 💙 Structure
 - a collection of values of different data types
